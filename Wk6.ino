@@ -36,8 +36,16 @@ int main()
     //query sensor
    //int sensorReading = SensorValue();
     
+//     // active reading
+//     int speed = 64;
+//     setMotorSpeeds(var[8]/4,var[11]/4);
+//     if (var[8]<200)
+//     {setMotorSpeeds(speed*2,var[11]/3);}
+//     if (var[11]<200)
+//     {setMotorSpeeds(var[8]/3,speed*2);}
     //determine motor speeds using bang-bang logic
     //if(ADC4 `<128){motorSpeeds[0] = 255;}
+    
     motorSpeeds[0] = var[8]
     if(var[8] >= THRESHOLD && var[11] >=THRESHOLD){
       motorSpeeds[0] = FULL_SPEED;
